@@ -10,7 +10,7 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<unknown>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
 

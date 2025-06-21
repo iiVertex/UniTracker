@@ -9,8 +9,6 @@ import {
   Edit, 
   Trash2, 
   GraduationCap, 
-  Calendar, 
-  DollarSign,
   CheckCircle,
   Clock,
   XCircle,

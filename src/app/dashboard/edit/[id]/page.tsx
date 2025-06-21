@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Select } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
-import { supabase, University } from '@/lib/supabase'
+import { supabase } from '@/lib/supabase'
 import { ArrowLeft, Save, Loader2 } from 'lucide-react'
 
 export default function EditUniversity() {
@@ -37,7 +37,7 @@ export default function EditUniversity() {
 
   useEffect(() => {
     fetchUniversity()
-  }, [universityId])
+  }, [fetchUniversity])
 
   const fetchUniversity = async () => {
     try {
@@ -70,7 +70,7 @@ export default function EditUniversity() {
           status: data.status
         })
       }
-    } catch (error) {
+    } catch {
       setError('An unexpected error occurred')
     } finally {
       setLoading(false)
@@ -105,7 +105,7 @@ export default function EditUniversity() {
       } else {
         router.push('/dashboard')
       }
-    } catch (error) {
+    } catch {
       setError('An unexpected error occurred')
     } finally {
       setSaving(false)

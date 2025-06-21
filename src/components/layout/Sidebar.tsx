@@ -13,8 +13,7 @@ import {
   Settings, 
   LogOut, 
   Menu, 
-  X,
-  User
+  X
 } from 'lucide-react'
 
 interface SidebarProps {
@@ -37,8 +36,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ userEmail }) => {
     await supabase.auth.signOut()
     router.push('/')
   }
-
-  const isActive = (href: string) => pathname === href
 
   return (
     <>

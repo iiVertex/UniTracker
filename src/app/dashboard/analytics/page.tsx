@@ -7,7 +7,6 @@ import {
   Globe, 
   DollarSign, 
   TrendingUp,
-  Calendar,
   CheckCircle,
   XCircle,
   AlertCircle,

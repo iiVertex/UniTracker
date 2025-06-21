@@ -44,7 +44,7 @@ export default function AddUniversity() {
         return
       }
 
-      const { error } = await supabase
+      const { error: insertError } = await supabase
         .from('universities')
         .insert([
           {
@@ -55,12 +55,12 @@ export default function AddUniversity() {
           }
         ])
 
-      if (error) {
-        setError(error.message)
+      if (insertError) {
+        setError(insertError.message)
       } else {
         router.push('/dashboard')
       }
-    } catch (error) {
+    } catch {
       setError('An unexpected error occurred')
     } finally {
       setLoading(false)

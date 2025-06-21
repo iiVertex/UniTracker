@@ -2,16 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
-import { Input } from '@/components/ui/Input'
-import { supabase } from '@/lib/supabase'
 import { User, Mail, Shield, LogOut } from 'lucide-react'
+import { supabase } from '@/lib/supabase'
 
 export default function Settings() {
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<unknown>(null)
   const [loading, setLoading] = useState(true)
-  const [saving, setSaving] = useState(false)
-  const [error, setError] = useState('')
-  const [success, setSuccess] = useState('')
 
   useEffect(() => {
     fetchUser()
@@ -32,6 +28,10 @@ export default function Settings() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut()
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<unknown>) => {
+    // Implementation of handleInputChange function
   }
 
   if (loading) {
