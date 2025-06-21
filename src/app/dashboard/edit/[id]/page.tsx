@@ -36,30 +36,14 @@ export default function EditUniversity() {
   ]
 
   useEffect(() => {
-    fetchUniversity()
-  }, [fetchUniversity])
-
-  const fetchUniversity = async () => {
-    try {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) {
-        setError('You must be logged in to edit a university')
-        return
-      }
-
-      const { data, error } = await supabase
-        .from('universities')
-        .select('*')
-        .eq('id', universityId)
-        .eq('user_id', user.id)
-        .single()
-
-      if (error) {
-        setError('University not found or you do not have permission to edit it')
-        return
-      }
-
-      if (data) {
+    const fetchUniversity = async () => {
+      setLoading(true)
+      try {
+        const { data } = await supabase
+          .from('universities')
+          .select('*')
+          .eq('id', universityId)
+          .single()
         setFormData({
           name: data.name,
           country: data.country,
@@ -69,13 +53,14 @@ export default function EditUniversity() {
           notes: data.notes || '',
           status: data.status
         })
+      } catch {
+        setError('An unexpected error occurred')
+      } finally {
+        setLoading(false)
       }
-    } catch {
-      setError('An unexpected error occurred')
-    } finally {
-      setLoading(false)
     }
-  }
+    fetchUniversity()
+  }, [universityId])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

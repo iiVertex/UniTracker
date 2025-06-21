@@ -30,10 +30,6 @@ export default function Settings() {
     await supabase.auth.signOut()
   }
 
-  const handleInputChange = (e: React.ChangeEvent<unknown>) => {
-    // Implementation of handleInputChange function
-  }
-
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 import { supabase } from '@/lib/supabase'
 import { 
@@ -22,7 +22,6 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ userEmail }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
   const router = useRouter()
 
   const navigation = [
