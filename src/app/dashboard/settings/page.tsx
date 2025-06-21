@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
 import { User, Mail, Shield, LogOut } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
+import type { User as SupabaseUser } from '@supabase/supabase-js'
 
 export default function Settings() {
-  const [user, setUser] = useState<unknown>(null)
+  const [user, setUser] = useState<SupabaseUser | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
