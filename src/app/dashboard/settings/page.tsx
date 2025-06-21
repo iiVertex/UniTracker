@@ -85,13 +85,15 @@ export default function Settings() {
                 </label>
                 <div className="p-3 bg-neutral-lightGray rounded-lg">
                   <span className="text-neutral-darkGray">
-                    {new Date(user?.created_at).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    })}
+                    {user?.created_at
+                      ? new Date(user.created_at).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
+                          hour: '2-digit',
+                          minute: '2-digit'
+                        })
+                      : 'N/A'}
                   </span>
                 </div>
               </div>
