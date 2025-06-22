@@ -42,7 +42,7 @@ export default function Home() {
       <nav className="relative z-10 px-6 py-4 bg-white border-b border-black">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-red" />
+            <GraduationCap className="h-8 w-8 text-black" />
             <span className="text-2xl font-bold text-black">UniTracker</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
@@ -56,7 +56,7 @@ export default function Home() {
               Login
             </Link>
             <Link href="/auth/signup">
-              <Button variant="primary" size="sm" className="bg-red text-white hover:bg-red-dark">Get Started</Button>
+              <Button variant="secondary" size="sm" className="border-black text-black hover:bg-black/80 hover:text-white">Get Started</Button>
             </Link>
           </div>
         </div>
@@ -75,10 +75,13 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/auth/signup">
-              <Button variant="primary" size="lg" className="bg-red text-white hover:bg-red-dark">Start Tracking Now</Button>
+              <Button variant="secondary" size="lg" className="border-black text-black hover:bg-black/80 hover:text-white">Start Tracking Now</Button>
             </Link>
             <Link href="#features">
               <Button variant="secondary" size="lg" className="border-black text-black hover:bg-black/80 hover:text-white">Learn More</Button>
+            </Link>
+            <Link href="/auth/login">
+              <Button variant="secondary" size="lg" className="border-black text-black hover:bg-black/80 hover:text-white">Demo Login</Button>
             </Link>
           </div>
         </div>
@@ -88,10 +91,10 @@ export default function Home() {
       <section id="features" className="px-6 py-20 bg-black">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Everything You Need to Succeed
             </h2>
-            <p className="text-lg text-black max-w-2xl mx-auto">
+            <p className="text-lg text-white max-w-2xl mx-auto">
               Our comprehensive platform provides all the tools you need to manage your university applications effectively.
             </p>
           </div>
@@ -99,8 +102,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-black">
-                <div className="w-12 h-12 bg-red/10 rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="h-6 w-6 text-red" />
+                <div className="w-12 h-12 bg-black/10 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="h-6 w-6 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold text-black mb-3">
                   {feature.title}
@@ -124,7 +127,7 @@ export default function Home() {
             Join thousands of students who are already tracking their university applications with UniTracker.
           </p>
           <Link href="/auth/signup">
-            <Button size="lg" className="bg-white text-red hover:bg-black/80">Create Your Account</Button>
+            <Button size="lg" className="bg-red text-white border-2 border-white hover:bg-red-dark">Create Your Account</Button>
           </Link>
         </div>
       </section>
