@@ -2,6 +2,11 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { GraduationCap, Globe, Calendar, DollarSign, CheckCircle, BarChart3 } from 'lucide-react'
 
+export const metadata = {
+  title: 'University Application Tracker',
+  description: 'A comprehensive tool for managing university applications',
+}
+
 export default function Home() {
   const features = [
     {
