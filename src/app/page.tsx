@@ -80,9 +80,6 @@ export default function Home() {
             <Link href="#features">
               <Button variant="secondary" size="lg" className="border-black text-black hover:bg-black/80 hover:text-white">Learn More</Button>
             </Link>
-            <Link href="/auth/login">
-              <Button variant="secondary" size="lg" className="border-black text-black hover:bg-black/80 hover:text-white">Demo Login</Button>
-            </Link>
           </div>
         </div>
       </section>
