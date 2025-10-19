@@ -1,7 +1,7 @@
 # UniTracker - University Application Tracker
 
 A modern web application built with Next.js, TypeScript, and Supabase to help students track their university applications, deadlines, and scholarship opportunities. 
-Check it out here --> uni-tracker-five.vercel.app
+Check it out here -->  [uni-tracker-five.vercel.app](https://uni-tracker-five.vercel.app)
 
 ## 🚀 Features
 
