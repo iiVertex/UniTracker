@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   
   const variants = {
     primary: 'bg-primary-blue text-white hover:opacity-90 hover:-translate-y-0.5 active:translate-y-0 focus:ring-primary-blue shadow-subtle',
-    secondary: 'bg-transparent text-primary-blue border border-primary-blue hover:bg-primary-blue hover:text-white focus:ring-primary-blue'
+    secondary: 'font-normal text-primary-blue border border-primary-blue hover:bg-primary-blue hover:font-bold focus:ring-primary-blue'
   }
   
   const sizes = {

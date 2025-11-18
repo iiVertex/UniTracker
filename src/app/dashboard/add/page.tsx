@@ -91,7 +91,7 @@ export default function AddUniversity() {
       </div>
 
       {/* Form */}
-      <div className="bg-card rounded-xl shadow-card p-8 border border-neutral-lightGray">
+      <div className="bg-card rounded-xl shadow-card p-8 border border-neutral-lightGray text-white">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input
@@ -131,6 +131,7 @@ export default function AddUniversity() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input
               label="Scholarship Percentage"
+              color="white"
               type="number"
               min="0"
               max="100"

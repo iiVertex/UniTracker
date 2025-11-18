@@ -193,6 +193,7 @@ export default function EditUniversity() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input
               label="Scholarship Percentage"
+              color="white"
               type="number"
               min="0"
               max="100"
