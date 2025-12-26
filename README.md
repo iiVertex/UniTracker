@@ -3,6 +3,13 @@
 A modern web application built with Next.js, TypeScript, and Supabase to help students track their university applications, deadlines, and scholarship opportunities. 
 Check it out here -->  [uni-tracker-five.vercel.app](https://uni-tracker-five.vercel.app)
 
+## Demo Video
+
+
+https://github.com/user-attachments/assets/ef18c08e-f490-4d55-a45b-8179f0b00cf5
+
+
+
 ## 🚀 Features
 
 - **User Authentication**: Secure signup and login with Supabase Auth
