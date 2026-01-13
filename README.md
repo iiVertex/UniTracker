@@ -123,54 +123,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📁 Project Structure
-
-```
-src/
-├── app/                    # Next.js app directory
-│   ├── auth/              # Authentication pages
-│   │   ├── login/         # Login page
-│   │   └── signup/        # Signup page
-│   ├── dashboard/         # Dashboard pages
-│   │   ├── add/           # Add university form
-│   │   ├── edit/          # Edit university form
-│   │   ├── analytics/     # Analytics page
-│   │   ├── settings/      # Settings page
-│   │   ├── layout.tsx     # Dashboard layout
-│   │   └── page.tsx       # Main dashboard
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Landing page
-├── components/            # Reusable components
-│   ├── ui/               # UI components
-│   │   ├── Button.tsx
-│   │   ├── Input.tsx
-│   │   ├── Select.tsx
-│   │   └── Textarea.tsx
-│   └── layout/           # Layout components
-│       └── Sidebar.tsx
-└── lib/                  # Utility functions
-    ├── supabase.ts       # Supabase client
-    └── utils.ts          # Utility functions
-```
-
-## 🎨 Design System
-
-The application uses a custom design system with:
-
-- **Colors**: Primary blue (#1E88E5), accent colors for status indicators
-- **Typography**: Inter font family with consistent sizing
-- **Spacing**: 8px base unit system
-- **Components**: Consistent button, input, and card styles
-- **Responsive**: Mobile-first approach with breakpoints
-
-## 🔧 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
