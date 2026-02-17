@@ -21,7 +21,7 @@ export const Input: React.FC<InputProps> = ({
       )}
       <input
         className={cn(
-          'w-full px-4 py-3 text-base border border-neutral-mediumGray rounded-lg bg-white transition-all duration-200',
+          'w-full px-4 py-3 text-base border border-neutral-medium Gray rounded-lg bg-white transition-all duration-200',
           'focus:border-primary-blue focus:ring-2 focus:ring-primary-blue focus:ring-opacity-10 focus:outline-none',
           'text-black placeholder:text-neutral-mediumGray',
           error && 'border-accent-red focus:border-accent-red focus:ring-accent-red',
